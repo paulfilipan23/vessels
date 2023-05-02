@@ -1,25 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
+import Graphs from "./pages/Graphs";
+import Home from "./pages/Home";
+import Vessel from "./pages/Vessel";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Router>
+      <div>
+        <nav
+          style={{
+            display: "flex",
+            justifyContent: "space-around",
+            alignItems: "center",
+            padding: "10px",
+            backgroundColor: "lightblue",
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Link to="/">Home</Link>
+          <Link to="/graphs">Graphs</Link>
+        </nav>
+
+        <Routes>
+          <Route path="/graphs" element={<Graphs />} />
+          <Route path="/vessel/:vesselId" element={<Vessel />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

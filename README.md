@@ -1,46 +1,39 @@
-# Getting Started with Create React App
+# Vessels App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a web application that allows you to load all vessels and view their port calls. It also displays graphs for various port call statistics.
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+To run the project, you must have Node.js installed on your computer. First, open a terminal and navigate to the project directory. Then run the following commands:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### `npm ci`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+This will install the required dependencies and start the server.
 
-### `npm test`
+## Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Once the server is running, you can navigate to `http://localhost:3000` in your browser to access the app. There are two pages in the app:
 
-### `npm run build`
+### Home Page
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The home page has a button that loads all the vessels. Once the vessels are loaded, you can click on one of the cards to view the list of all port calls for that vessel, with some information for each portcall.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Graphs Page
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The graphs page displays various graphs for port call statistics:
 
-### `npm run eject`
+- Top 5 Ports
+- Bottom 5 Ports
+- Graph of ports with the most port calls in minutes sorted by number of total port calls
+- Chart displaying the ports sorted by total minutes
+- List of port calls sorted by port call duration time
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Testing
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+You can run the tests for the app by running the following command:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### `npm run test`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+This will run all the tests for the app and display the results in the terminal.
